@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCB-RPG-Web-Frontend", "LCB-RPG-ASP.NET\LCB-RPG-Web-Frontend.csproj", "{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EBBECFD-F166-45E5-85A3-C17A3F45D30D}
+	EndGlobalSection
+EndGlobal

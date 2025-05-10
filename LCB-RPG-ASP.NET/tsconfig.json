@@ -1,0 +1,17 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES6",
+    "outDir": "wwwroot/scripts"
+  },
+  "include": [
+    "source/**/*"
+  ],
+  "exclude": [
+    "wwwroot"
+  ]
+}

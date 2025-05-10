@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>LCB_RPG_ASP.NET</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="source\node_modules\**" />
+    <Compile Remove="types\**" />
+    <Content Remove="source\node_modules\**" />
+    <Content Remove="types\**" />
+    <EmbeddedResource Remove="source\node_modules\**" />
+    <EmbeddedResource Remove="types\**" />
+    <None Remove="source\node_modules\**" />
+    <None Remove="types\**" />
+    <TypeScriptCompile Remove="node_modules\**" />
+    <TypeScriptCompile Remove="source\node_modules\**" />
+    <TypeScriptCompile Remove="types\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="source\scripts\main.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="source\scripts\main.ts">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="source\scripts\main.ts" />
+    <None Include="wwwroot\views\LCB-Client.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
