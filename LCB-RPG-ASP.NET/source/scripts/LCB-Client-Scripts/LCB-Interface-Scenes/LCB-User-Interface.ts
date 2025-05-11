@@ -1,4 +1,4 @@
-﻿import * as THREE from '../node_modules/@types/three/index.d.js';
+﻿import * as THREE from '../../../node_modules/@types/three/index.d.js';
 
 
 const scene = new THREE.Scene();

@@ -30,14 +30,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="source\scripts\main.ts">
+    <Content Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Scenes\LCB-User-Interface.ts">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="source\scripts\main.ts" />
+    <None Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Scenes\LCB-User-Interface.ts" />
     <None Include="wwwroot\views\LCB-Client.html" />
   </ItemGroup>
 
@@ -46,6 +46,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Meshes\" />
+    <Folder Include="wwwroot\scripts\" />
   </ItemGroup>
 
 </Project>
