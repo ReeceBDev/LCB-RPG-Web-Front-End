@@ -6,11 +6,24 @@
     <title>My first three.ts app</title>
 </head>
 <body>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.174.0/three.module.min.js",
+            "troika-three-text": "https://cdn.jsdelivr.net/npm/troika-three-text@0.52.4/dist/troika-three-text.esm.min.js",
+            "bidi-js": "https://cdn.jsdelivr.net/npm/bidi-js@1.0.3/dist/bidi.min.mjs",
+            "troika-three-utils": "https://cdn.jsdelivr.net/npm/troika-three-utils@0.52.4/dist/troika-three-utils.esm.min.js",
+            "troika-worker-utils": "https://cdn.jsdelivr.net/npm/troika-worker-utils@0.52.0/dist/troika-worker-utils.esm.min.js",
+            "webgl-sdf-generator": "https://cdn.jsdelivr.net/npm/webgl-sdf-generator@1.1.1/dist/webgl-sdf-generator.min.mjs",
+            "postprocessing": "https://www.unpkg.com/postprocessing@6.37.3/build/index.js"
+          }
+        }
+    </script>
     <div id="RenderContainer">
 
         <!-- ThreeJS Renderer -->
         <div id="ThreeJSRenderer">
-            <script type="module" src="../scripts/LCB-User-Interface.js"></script>
+            <script type="module" src="/scripts/LCB-Client-Page/LCB-Interface-Scenes/LCB-User-Interface.js"></script>
         </div>
 
         <div id="OverlayText">Partially complete... This application is a Work-In-Progress.</div>

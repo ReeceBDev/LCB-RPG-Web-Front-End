@@ -14,6 +14,6 @@ namespace LCB_RPG_ASP.NET
             app.MapGet("/", () => Results.File("views/LCB-Client.html", "text/html"));
 
             app.Run();
-        }
+        }   
     }
 }

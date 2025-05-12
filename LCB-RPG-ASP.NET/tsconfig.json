@@ -6,12 +6,12 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "ES6",
-    "outDir": "wwwroot/scripts"
+    "paths": {
+      "troika-three-text": [ "./node_modules/troika-three-text/src/index.js" ],
+      "postprocessing": [ "./node_modules/postprocessing/build/index.js" ]
+    }
   },
   "include": [
-    "source/**/*"
-  ],
-  "exclude": [
-    "wwwroot"
+    "wwwroot/scripts/**/*"
   ]
 }

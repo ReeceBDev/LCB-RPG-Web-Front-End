@@ -1,5 +1,10 @@
 {
   "devDependencies": {
-    "pug": "^3.0.3"
+    "@types/three": "^0.176.0",
+    "three": "0.176.0"
+  },
+  "dependencies": {
+    "postprocessing": "^6.37.3",
+    "troika-three-text": "^0.52.4"
   }
 }

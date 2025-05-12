@@ -8,36 +8,34 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="source\node_modules\**" />
     <Compile Remove="types\**" />
-    <Content Remove="source\node_modules\**" />
     <Content Remove="types\**" />
-    <EmbeddedResource Remove="source\node_modules\**" />
     <EmbeddedResource Remove="types\**" />
-    <None Remove="source\node_modules\**" />
     <None Remove="types\**" />
     <TypeScriptCompile Remove="node_modules\**" />
-    <TypeScriptCompile Remove="source\node_modules\**" />
     <TypeScriptCompile Remove="types\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js" />
+    <Content Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js.map" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Remove="source\scripts\main.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Scenes\LCB-User-Interface.ts">
+    <Content Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.ts">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Scenes\LCB-User-Interface.ts" />
+    <None Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js" />
+    <None Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js.map" />
     <None Include="wwwroot\views\LCB-Client.html" />
   </ItemGroup>
 
@@ -49,8 +47,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="source\scripts\LCB-Client-Scripts\LCB-Interface-Meshes\" />
-    <Folder Include="wwwroot\scripts\" />
+    <Folder Include="wwwroot\lib\local-postprocessing\" />
+    <Folder Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Meshes\" />
   </ItemGroup>
 
 </Project>
