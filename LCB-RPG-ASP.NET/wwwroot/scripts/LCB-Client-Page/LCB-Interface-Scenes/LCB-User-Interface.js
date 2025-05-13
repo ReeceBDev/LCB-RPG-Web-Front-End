@@ -147,7 +147,8 @@ whitePanel.position.x = +1.8;
 whitePanel.position.y = -3.9;
 //PostProcessing
 import { EffectComposer, EffectPass, RenderPass, KernelSize, Selection } from "postprocessing";
-import { SelectiveBloomEffect } from 'postprocessing';
+//import { SelectiveBloomEffect } from 'postprocessing';
+import { SelectiveBloomEffect } from '../../../lib/local/customPostprocessing.js';
 const composer = new EffectComposer(renderer);
 //const composer = new EffectComposer(renderer, {
 multisampling: 4;

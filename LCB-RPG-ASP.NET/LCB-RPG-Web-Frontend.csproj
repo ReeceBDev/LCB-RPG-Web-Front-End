@@ -47,7 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\lib\local-postprocessing\" />
     <Folder Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Meshes\" />
   </ItemGroup>
 

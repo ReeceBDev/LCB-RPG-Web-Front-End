@@ -181,7 +181,8 @@ whitePanel.position.y = - 3.9
 import { BloomEffect, EffectComposer, EffectPass, RenderPass, KernelSize, BoxBlurPass, MipmapBlurPass, LuminancePass, SMAAEffect, FXAAEffect, Selection, KawaseBlurPass, GaussianBlurPass } from "postprocessing";
 import { Resolution } from 'postprocessing';
 
-import { SelectiveBloomEffect } from 'postprocessing';
+//import { SelectiveBloomEffect } from 'postprocessing';
+import { SelectiveBloomEffect } from '../../../lib/local/customPostprocessing.js';
 
 const composer = new EffectComposer(renderer);
 //const composer = new EffectComposer(renderer, {
