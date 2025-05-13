@@ -9844,7 +9844,7 @@ var SelectiveBloomEffect = class extends BloomEffect {
      * @param {Camera} camera - The main camera.
      * @param {Object} [options] - The options. See {@link BloomEffect} for details.
      */
-    constructor(scene, camera, selection, options) {
+    constructor(scene, camera, selection, options, isInverted = false) {
         super(options);
         this.setAttributes(this.getAttributes() | EffectAttribute.DEPTH);
         this.camera = camera;
@@ -9856,11 +9856,11 @@ var SelectiveBloomEffect = class extends BloomEffect {
         depthMaskMaterial.copyCameraSettings(camera);
         depthMaskMaterial.depthBuffer1 = this.depthPass.texture;
         depthMaskMaterial.depthPacking1 = RGBADepthPacking3;
-        depthMaskMaterial.depthMode = EqualDepth2;
+        this.depthMaskMaterial.depthMode = isInverted ? NotEqualDepth2 : EqualDepth2;
         this.renderTargetMasked = new WebGLRenderTarget13(1, 1, { depthBuffer: false });
         this.renderTargetMasked.texture.name = "Bloom.Masked";
         this.selection = selection;
-        this._inverted = false;
+        this._inverted = isInverted;
         this._ignoreBackground = false;
     }
     set mainScene(value) {
