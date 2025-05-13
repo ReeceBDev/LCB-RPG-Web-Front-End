@@ -205,11 +205,22 @@ composer.addPass(msaaRenderPass);
 
 
 //Blooms
-//composer.addPass(new EffectPass(camera, new BloomEffect({ luminanceThreshold: 0, intensity: 0.04, kernelSize: KernelSize.HUGE })));
-//composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, { selection: orangeBloomTargets, luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
-const orangeBloomTargets = new Selection([emergencyOrangeOutline, emergencyOrangeSolid, emergencyOrangeTitle], 3);
-const greenBloomTargets = new Selection([matrixGreenSolid], 2);
-composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, orangeBloomTargets, {luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
+const orangeBloomTargets = [emergencyOrangeSolid, emergencyOrangeOutline, emergencyOrangeTitle];
+const greenBloomTargets = [warningRedSolid, warningRedOutline, warningRedTitle];
+
+let totalCustomBloomTargets = [];
+totalCustomBloomTargets = totalCustomBloomTargets.concat(orangeBloomTargets);
+totalCustomBloomTargets = totalCustomBloomTargets.concat(greenBloomTargets);
+
+//Global Bloom
+composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(totalCustomBloomTargets, 2), { luminanceThreshold: 0, intensity: 0.04, kernelSize: KernelSize.HUGE }, true)));
+
+//Orange Bloom
+composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(orangeBloomTargets, 3), { luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
+
+//Green Bloom
+composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(greenBloomTargets, 4), { luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
+
 
 //Blur
 //composer.addPass(new KawaseBlurPass({ kernelSize: KernelSize.VERY_SMALL }))
