@@ -1,9 +1,10 @@
 import * as THREE from 'three';
 import { Text } from 'troika-three-text';
 import { Colour } from '../Colour.js';
-import { OverrideMaterialManager } from 'postprocessing';
-OverrideMaterialManager.workaroundEnabled = true;
+//import { OverrideMaterialManager } from 'postprocessing';
+//OverrideMaterialManager.workaroundEnabled = true
 const scene = new THREE.Scene();
+scene.background = new THREE.Color().setRGB(0, 0, 0);
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ antialias: false });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -17,7 +18,7 @@ const boxOutline = new THREE.EdgesGeometry(solidBox);
 //Background modifications
 const whitePanel = new THREE.Mesh(new THREE.PlaneGeometry(3.7, 2.5), new THREE.MeshBasicMaterial({ color: 0xFFFFFF, side: THREE.FrontSide }));
 //RGB
-const warningRedSolid = new THREE.Mesh(solidBox, new THREE.MeshStandardMaterial({ color: Colour.WarningRed, emissive: Colour.WarningRed, emissiveIntensity: 1 }));
+const warningRedSolid = new THREE.Mesh(solidBox, new THREE.MeshBasicMaterial({ color: Colour.WarningRed }));
 const warningRedOutline = new THREE.LineSegments(boxOutline, new THREE.LineBasicMaterial({ color: Colour.WarningRed }));
 const warningRedTitle = new Text();
 warningRedTitle.text = 'WARNING RED';
@@ -146,23 +147,25 @@ whitePanel.position.z = -1;
 whitePanel.position.x = +1.8;
 whitePanel.position.y = -3.9;
 //PostProcessing
-import { EffectComposer, EffectPass, RenderPass, KernelSize, Selection } from "postprocessing";
-//import { SelectiveBloomEffect } from 'postprocessing';
+//Effect Imports 
+// @ts-ignore
+import { EffectComposer as ThreeEffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { EffectComposer as PostProcessingEffectComposer, EffectPass, RenderPass, KernelSize, FXAAEffect, Selection } from "postprocessing";
+//import { UnrealSelectiveBloomEffect } from 'postprocessing'; //This isnt the correct import name or path!
 import { SelectiveBloomEffect } from '../../../lib/local/customPostprocessing.js';
-const composer = new EffectComposer(renderer);
-//const composer = new EffectComposer(renderer, {
-multisampling: 4;
-//});
-composer.addPass(new RenderPass(scene, camera));
-//SSAA (Not MSAA!)
-/*
-const msaaRenderPass = new THREE.SSAARenderPass(scene, camera);
-msaaRenderPass.unbiased = true;
-msaaRenderPass.sampleLevel = 4;
-composer.addPass(msaaRenderPass);
-*/
-//FXAA. This works! :D
-//composer.addPass(new EffectPass(camera, new FXAAEffect(scene, camera)));
+//EffectComposers
+//Vanilla EffectComposer
+const threeEffectComposer = new ThreeEffectComposer(renderer);
+//PostProcessing EffectComposer
+const postprocessingComposer = new PostProcessingEffectComposer(renderer, { multisampling: 4 });
+postprocessingComposer.addPass(new RenderPass(scene, camera));
+//SSAA Vanilla
+// @ts-ignore
+import { SSAARenderPass } from 'three/addons/postprocessing/SSAARenderPass.js';
+threeEffectComposer.addPass(new SSAARenderPass(scene, camera)); //Appears to mess up the colours?
+//threeEffectComposer.addPass(new GlitchPass());
+//FXAA PostProcessing. This works! :D
+postprocessingComposer.addPass(new EffectPass(camera, new FXAAEffect(scene, camera)));
 //Blooms
 const orangeBloomTargets = [emergencyOrangeSolid, emergencyOrangeOutline, emergencyOrangeTitle];
 const greenBloomTargets = [warningRedSolid, warningRedOutline, warningRedTitle];
@@ -170,11 +173,11 @@ let totalCustomBloomTargets = [];
 totalCustomBloomTargets = totalCustomBloomTargets.concat(orangeBloomTargets);
 totalCustomBloomTargets = totalCustomBloomTargets.concat(greenBloomTargets);
 //Global Bloom
-composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(totalCustomBloomTargets, 2), { luminanceThreshold: 0, intensity: 0.04, kernelSize: KernelSize.HUGE }, true)));
+postprocessingComposer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(totalCustomBloomTargets, 2), { luminanceThreshold: 0, intensity: 0.04, kernelSize: KernelSize.HUGE }, true)));
 //Orange Bloom
-composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(orangeBloomTargets, 3), { luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
+postprocessingComposer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(orangeBloomTargets, 3), { luminanceThreshold: 0, intensity: 0.1, kernelSize: KernelSize.HUGE })));
 //Green Bloom
-composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(greenBloomTargets, 4), { luminanceThreshold: 0, intensity: 5, kernelSize: KernelSize.HUGE })));
+postprocessingComposer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, new Selection(greenBloomTargets, 4), { luminanceThreshold: 0, intensity: 0.4, kernelSize: KernelSize.HUGE })));
 //Blur
 //composer.addPass(new KawaseBlurPass({ kernelSize: KernelSize.VERY_SMALL }))
 //composer.addPass(new GaussianBlurPass({kernelSize: 7, }))
@@ -184,7 +187,7 @@ composer.addPass(new EffectPass(camera, new SelectiveBloomEffect(scene, camera, 
 //composer.addPass(new LuminancePass());
 requestAnimationFrame(function render() {
     requestAnimationFrame(render);
-    composer.render();
+    postprocessingComposer.render();
 });
 function animate() {
     /*
@@ -234,6 +237,7 @@ function animate() {
     blackOutline.rotation.y += 0.014;
     */
     //Camera
-    renderer.render(scene, camera);
+    //renderer.render(scene, camera); //no effect composer - appears to not be required when another .render is present. Obviously that only becomes the case if a pass is in the composer which is .render-ed.
+    threeEffectComposer.render(); //threejs effect composer
 }
 //# sourceMappingURL=LCB-User-Interface.js.map
