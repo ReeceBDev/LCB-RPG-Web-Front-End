@@ -1,0 +1,1 @@
+{"version":3,"file":"AnimationInstructions.js","sourceRoot":"","sources":["AnimationInstructions.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,YAAY,EAAE,MAAM,mBAAmB,CAAC;AAGjD,MAAM,OAAO,qBAAsB,SAAQ,YAAY;IAInD,YACI,cAAkC,EAClC,aAAoC,IAAI,KAAqB;QAE7D,KAAK,CAAC,UAAU,CAAC,CAAC;QAClB,IAAI,CAAC,WAAW,GAAG,cAAc,CAAC;IACtC,CAAC;CACJ"}
