@@ -18,24 +18,19 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
-    <Content Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js" />
-    <Content Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js.map" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\EffectInstructions.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\Types\Instructions.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.ts">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Content Include="wwwroot\scripts\LCB-Client-Page\Types\Instructions.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\Types\EffectInstructions.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js" />
-    <None Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\LCB-User-Interface.js.map" />
     <None Include="wwwroot\views\LCB-Client.html" />
   </ItemGroup>
 
@@ -48,6 +43,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Meshes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\lib\local\customPostprocessing.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
