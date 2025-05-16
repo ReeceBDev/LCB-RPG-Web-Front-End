@@ -8403,7 +8403,7 @@ var noise_default = `void mainImage(const in vec4 inputColor,const in vec2 uv,ou
 #ifdef PREMULTIPLY
 outputColor=vec4(min(inputColor.rgb*noise,vec3(1.0)),inputColor.a);
 #else
-outputColor=vec4(noise,inputColor.a);
+outputColor=vec4(vec3(clamp(rand(uv*(1.0+time)), 0.0, 0.6), clamp(rand(uv*(1.0+time)), 0.0, 0.6), clamp(rand(uv*(1.0+time)), 0.0, 0.6)),inputColor.a);
 #endif
 }`;
 
@@ -8416,7 +8416,7 @@ var NoiseEffect = class extends Effect {
      * @param {BlendFunction} [options.blendFunction=BlendFunction.SCREEN] - The blend function of this effect.
      * @param {Boolean} [options.premultiply=false] - Whether the noise should be multiplied with the input colors prior to blending.
      */
-    constructor({ blendFunction = BlendFunction.SCREEN, premultiply = false } = {}) {
+    constructor({ blendFunction = BlendFunction.SCREEN, premultiply = false} = {}) {
         super("NoiseEffect", noise_default, { blendFunction });
         this.premultiply = premultiply;
     }
