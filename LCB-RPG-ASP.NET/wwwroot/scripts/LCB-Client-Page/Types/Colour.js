@@ -7,6 +7,6 @@ export var Colour;
     Colour[Colour["AlertYellow"] = 16777118] = "AlertYellow";
     Colour[Colour["WarningRed"] = 13045513] = "WarningRed";
     Colour[Colour["MatrixGreen"] = 6541963] = "MatrixGreen";
-    Colour[Colour["ConditionNormalBlue"] = 11534335] = "ConditionNormalBlue";
+    Colour[Colour["ConditionBlue"] = 11534335] = "ConditionBlue";
 })(Colour || (Colour = {}));
 //# sourceMappingURL=Colour.js.map

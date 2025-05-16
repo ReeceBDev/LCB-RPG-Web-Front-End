@@ -8,5 +8,5 @@
 
     WarningRed = 0xC70F09,
     MatrixGreen = 0x63D28B,
-    ConditionNormalBlue = 0xAFFFFF
+    ConditionBlue = 0xAFFFFF
 }
