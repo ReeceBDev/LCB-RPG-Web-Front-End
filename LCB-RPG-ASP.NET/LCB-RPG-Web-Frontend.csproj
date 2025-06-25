@@ -22,16 +22,28 @@
 
   <ItemGroup>
     <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\EffectInstructions.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\AlertDemo.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\ExploreMenu.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\Health.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\RoundedTextboxSingle.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\Status.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\SceneElements\SceneElement.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\ScriptResources\IScene.ts" />
+    <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\ScriptResources\SceneUtilities.ts" />
     <TypeScriptCompile Remove="wwwroot\scripts\LCB-Client-Page\Types\Instructions.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\AlertDemo.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Scenes\ExploreMenu.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\Health.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\RoundedTextboxSingle.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\SceneElements\ExploreMenu\Status.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\SceneElements\SceneElement.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\ScriptResources\IScene.ts" />
+    <Content Include="wwwroot\scripts\LCB-Client-Page\ScriptResources\SceneUtilities.ts" />
     <Content Include="wwwroot\scripts\LCB-Client-Page\Types\Instructions.ts" />
     <Content Include="wwwroot\scripts\LCB-Client-Page\Types\EffectInstructions.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\views\LCB-Client.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,13 +54,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\scripts\LCB-Client-Page\LCB-Interface-Meshes\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="wwwroot\lib\local\customPostprocessing.js">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\views\LCB-Client.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Little Choice-Based RPG\Little Choice-Based RPG\Little Choice-Based RPG.csproj" />
   </ItemGroup>
 
 </Project>

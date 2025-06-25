@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCB-RPG-Web-Frontend", "LCB-RPG-ASP.NET\LCB-RPG-Web-Frontend.csproj", "{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Little Choice-Based RPG", "..\Little Choice-Based RPG\Little Choice-Based RPG\Little Choice-Based RPG.csproj", "{7A9B97A3-C780-BFAE-E532-E64B10226DA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{191B34A6-C5BD-45E8-A16F-F7AD4B7064ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9B97A3-C780-BFAE-E532-E64B10226DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9B97A3-C780-BFAE-E532-E64B10226DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9B97A3-C780-BFAE-E532-E64B10226DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9B97A3-C780-BFAE-E532-E64B10226DA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

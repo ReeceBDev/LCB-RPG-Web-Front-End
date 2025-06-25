@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="14.107628mm"
+   height="101.4715mm"
+   viewBox="0 0 14.107628 101.4715"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient13">
+      <stop
+         style="stop-color:#99f3ff;stop-opacity:0;"
+         offset="0"
+         id="stop13" />
+      <stop
+         style="stop-color:#a0b5b6;stop-opacity:1;"
+         offset="0.51464999"
+         id="stop15" />
+      <stop
+         style="stop-color:#a8e7eb;stop-opacity:0.07082155;"
+         offset="1"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient10">
+      <stop
+         style="stop-color:#00ccff;stop-opacity:0.49291784;"
+         offset="0"
+         id="stop10" />
+      <stop
+         style="stop-color:#00ccff;stop-opacity:1;"
+         offset="0.46969271"
+         id="stop12" />
+      <stop
+         style="stop-color:#00ccff;stop-opacity:0;"
+         offset="1"
+         id="stop11" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient8">
+      <stop
+         style="stop-color:#00ccff;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+      <stop
+         style="stop-color:#00ccff;stop-opacity:0;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="Square"
+       refX="0"
+       refY="0"
+       orient="auto"
+       markerWidth="0.60000002"
+       markerHeight="0.60000002"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M -5,-5 V 5 H 5 V -5 Z"
+         id="path18" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Square-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       markerWidth="0.60000002"
+       markerHeight="0.60000002"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M -5,-5 V 5 H 5 V -5 Z"
+         id="path18-8" />
+    </marker>
+    <linearGradient
+       xlink:href="#linearGradient8"
+       id="linearGradient9"
+       x1="102.22839"
+       y1="80.036461"
+       x2="102.22839"
+       y2="72.26432"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient10"
+       id="linearGradient11"
+       x1="102.26147"
+       y1="78.713547"
+       x2="101.99687"
+       y2="178.46147"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       style="overflow:visible"
+       id="Square-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       markerWidth="0.60000002"
+       markerHeight="0.60000002"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M -5,-5 V 5 H 5 V -5 Z"
+         id="path18-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Square-4-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       markerWidth="0.60000002"
+       markerHeight="0.60000002"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M -5,-5 V 5 H 5 V -5 Z"
+         id="path18-8-4" />
+    </marker>
+    <linearGradient
+       xlink:href="#linearGradient13"
+       id="linearGradient14"
+       x1="94.620102"
+       y1="170.99905"
+       x2="108.79207"
+       y2="170.9055"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.16370258,0.57995124)" />
+    <linearGradient
+       xlink:href="#linearGradient10"
+       id="linearGradient15"
+       gradientUnits="userSpaceOnUse"
+       x1="102.26147"
+       y1="78.713547"
+       x2="101.99687"
+       y2="178.46147"
+       gradientTransform="translate(0.01484251,0.91752443)" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-94.691021,-72.966247)">
+    <rect
+       style="opacity:1;fill:url(#linearGradient11);fill-opacity:1;stroke:#ffffff;stroke-width:1.011;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill"
+       id="rect1"
+       width="10.791081"
+       height="82.895126"
+       x="96.38398"
+       y="84.857132"
+       ry="3.5376647" />
+    <rect
+       style="fill:url(#linearGradient15);fill-opacity:1;stroke:#ffffff;stroke-width:1.011;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill"
+       id="rect1-8"
+       width="10.791081"
+       height="82.895126"
+       x="96.398819"
+       y="85.774651"
+       ry="3.5376647" />
+    <path
+       style="opacity:1;fill:#00ccff;fill-opacity:0;stroke:#ffffff;stroke-width:0.365277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Square);paint-order:markers stroke fill"
+       d="m 96.204661,98.792808 -1.25662,-1.154686 V 85.461438 l 2.18947,-3.167847 v -3.025466"
+       id="path5" />
+    <path
+       style="fill:#00ccff;fill-opacity:0;stroke:#ffffff;stroke-width:0.365277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Square-4);paint-order:markers stroke fill"
+       d="m 107.35939,98.732587 1.25662,-1.154686 V 85.401217 l -2.18947,-3.167847 v -3.025466"
+       id="path5-5" />
+    <path
+       style="fill:#00ccff;fill-opacity:0;stroke:#ffffff;stroke-width:0.365277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Square-7);paint-order:markers stroke fill"
+       d="m 96.130279,154.30493 -1.25662,1.15469 v 12.17668 l 2.18947,3.16784 v 3.02547"
+       id="path5-2" />
+    <path
+       style="fill:#00ccff;fill-opacity:0;stroke:#ffffff;stroke-width:0.365277;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Square-4-1);paint-order:markers stroke fill"
+       d="m 107.285,154.36515 1.25662,1.15469 v 12.17668 l -2.18947,3.16785 v 3.02546"
+       id="path5-5-2" />
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:0;stroke:#ffffff;stroke-width:0.39;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect6"
+       width="4.8557391"
+       height="9.7114782"
+       x="99.41259"
+       y="73.161247"
+       ry="2.4278696" />
+    <rect
+       style="fill:url(#linearGradient9);fill-opacity:1;stroke:#ffffff;stroke-width:0.309506;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0;paint-order:markers stroke fill"
+       id="rect6-1"
+       width="3.5705562"
+       height="8.3179083"
+       x="100.07415"
+       y="73.814636"
+       ry="2.0794771" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient14);fill-opacity:1;stroke:#994040;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect13"
+       width="5.1761198"
+       height="4.1104479"
+       x="99.320702"
+       y="169.52377"
+       ry="1.518114" />
+  </g>
+</svg>

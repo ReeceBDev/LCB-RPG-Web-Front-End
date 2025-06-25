@@ -8,7 +8,12 @@
     "target": "ES6",
     "paths": {
       "troika-three-text": [ "./node_modules/troika-three-text/src/index.js" ],
-      "postprocessing": [ "./node_modules/postprocessing/build/index.js" ]
+      "postprocessing": [ "./node_modules/postprocessing/build/index.js" ],
+      "three/addons/lines/Line2.js": [ "./node_modules/three/examples/jsm/lines/Line2.js" ],
+      "three/addons/lines/LineSegmentsGeometry.js": [ "./node_modules/three/examples/jsm/lines/LineSegmentsGeometry.js" ],
+      "three/addons/lines/LineGeometry.js": [ "./node_modules/three/examples/jsm/lines/LineGeometry.js" ],
+      "three/addons/lines/LineMaterial.js": [ "./node_modules/three/examples/jsm/lines/LineMaterial.js" ],
+      "three/addons/lines/Wireframe.js": [ "./node_modules/three/examples/jsm/lines/Wireframe.js" ]
     }
   },
   "include": [
